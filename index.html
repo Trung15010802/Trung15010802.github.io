@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/1273/1273737.png  ">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
 </head>
@@ -16,19 +17,19 @@
         <!-- Begin nav -->
         <div id="header">
             <ul id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         More
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
@@ -47,10 +48,10 @@
             </div>
 
         </div>
-        <!-- CONTENT -->
+        <!-- Begin CONTENT -->
         <div id="content">
             <!-- About section -->
-            <div class="content-section">
+            <div id="band" class="content-section">
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading">We love music</p>
                 <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur
@@ -77,7 +78,7 @@
                 </div>
             </div>
             <!-- Tour section -->
-            <div class="tour-section">
+            <div id="tour" class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading text-white">TOUR DATES</h2>
                     <p class="section-sub-heading text-white">Remember to book your tickets!</p>
@@ -96,7 +97,7 @@
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <button class="place-buy-btn js-buy-ticket">Buy tickets</button>
+                                <button class="btn js-buy-ticket">Buy tickets</button>
                             </div>
                         </div>
                         <div class="col col-third">
@@ -106,7 +107,7 @@
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <button class="place-buy-btn js-buy-ticket">Buy tickets</button>
+                                <button class="btn js-buy-ticket">Buy tickets</button>
                             </div>
                         </div>
                         <div class="col col-third">
@@ -116,14 +117,14 @@
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <button class="place-buy-btn js-buy-ticket">Buy tickets</button>
+                                <button class="btn js-buy-ticket">Buy tickets</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Contact section -->
-            <div class="content-section">
+            <!--Begin Contact section -->
+            <div id="contact" class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
                 <!-- Contact -->
@@ -145,17 +146,31 @@
                             </div>
                             <div class="row mt-8">
                                 <div class="col col-full">
-                                    <input type="text" name="" placeholder="Message" required id="" class="form-control">
+                                    <input type="text" name="" placeholder="Message" required id=""
+                                        class="form-control">
                                 </div>
                             </div>
-                            <input class="form-submit-btn mt-16" type="submit" value="SEND">
+                            <input class="btn mt-16 pull-right" type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
             </div>
+            <!--End Contact section -->
+            <div class="map-section"><img src="./assets/img/map.jpg" alt="Map"></div>
         </div>
+        <!-- CONTENT -->
         <!-- footer -->
-        <div id="footer"></div>
+        <div id="footer">
+            <div class="social-list">
+                <a href=""><i class="ti-facebook"></i></a>
+                <a href=""><i class="ti-instagram"></i></a>
+                <a href=""><i class="ti-youtube"></i></a>
+                <a href=""><i class="ti-pinterest"></i></a>
+                <a href=""><i class="ti-twitter"></i></a>
+                <a href=""><i class="ti-linkedin"></i></a>               
+            </div>
+            <p class="copyright">Powered by <a href="w3s.css">w3s.css </a></p>
+        </div>
     </div>
     <!-- Tạo bảng bán vé -->
     <div class="modal js-modal">
