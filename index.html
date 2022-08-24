@@ -42,11 +42,27 @@
         <!-- END HEADER -->
         <!-- SLIDER -->
         <div id="slider">
-            <div class="text-content">
-                <h2 class="text-head">New York</h2>
-                <div class="text-decription">The atmosphere in New York is lorem ipsum.</div>
+            <div class="slide-item">
+                <img src="./assets/img/Slider/slider1.jpg" alt="Chicago">
+                <div class="text-content">
+                    <h2 class="text-head">Chicago</h2>
+                    <div class="text-decription">Thank you, Chicago - A night we won't forget.</div>
+                </div>
             </div>
-
+            <div class="slide-item">
+                <img src="./assets/img/Slider/slider2.jpg" alt="New York">
+                <div class="text-content">
+                    <h2 class="text-head">New York</h2>
+                    <div class="text-decription">The atmosphere in New York is lorem ipsum.</div>
+                </div>
+            </div>
+            <div class="slide-item">
+                <img src="./assets/img/Slider/slider3.jpg" alt="Los Angeles">
+                <div class="text-content">
+                    <h2 class="text-head">Los Angeles</h2>
+                    <div class="text-decription">We had the best time playing at Venice Beach!</div>
+                </div>
+            </div>
         </div>
         <!-- Begin CONTENT -->
         <div id="content">
@@ -167,7 +183,7 @@
                 <a href=""><i class="ti-youtube"></i></a>
                 <a href=""><i class="ti-pinterest"></i></a>
                 <a href=""><i class="ti-twitter"></i></a>
-                <a href=""><i class="ti-linkedin"></i></a>               
+                <a href=""><i class="ti-linkedin"></i></a>
             </div>
             <p class="copyright">Powered by <a href="w3s.css">w3s.css </a></p>
         </div>
@@ -227,6 +243,22 @@
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation() //Ngăn sự kiện nổi bọt tác động đến class modal-container
         })
+
+
+        var slideIndex = 0;
+        slideShow();
+
+        function slideShow() {
+            var i;
+            var x = document.getElementsByClassName("slide-item");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) { slideIndex = 1 }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(slideShow, 2000); // Change image every 2 seconds
+        }
 
     </script>
 </body>
