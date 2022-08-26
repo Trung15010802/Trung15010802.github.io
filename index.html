@@ -8,6 +8,7 @@
     <title>The Band</title>
     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/1273/1273737.png  ">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
 </head>
 
@@ -38,6 +39,11 @@
                 <i class="search-icon ti-search"></i>
             </div>
             <!-- End: Search button -->
+            <!-- Begin: menu button mobile -->
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+            <!-- End: menu button moblie -->
         </div>
         <!-- END HEADER -->
         <!-- SLIDER -->
@@ -220,6 +226,7 @@
         </div>
     </div>
     <script>
+        // Mua vé buytickets
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
         const modal = document.querySelector('.js-modal')
         const modalContainer = document.querySelector('.js-modal-container')
@@ -244,10 +251,9 @@
             event.stopPropagation() //Ngăn sự kiện nổi bọt tác động đến class modal-container
         })
 
-
+        // Xử lý slider
         var slideIndex = 0;
         slideShow();
-
         function slideShow() {
             var i;
             var x = document.getElementsByClassName("slide-item");
@@ -260,6 +266,26 @@
             setTimeout(slideShow, 2000); // Change image every 2 seconds
         }
 
+        // Xử lý responsive menu buton đóng mở moblie menu
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+        mobileMenu.onclick = function () {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed)
+                header.style.height = 'auto';
+            else
+                header.style.height = null;
+        }
+
+        // Tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            menuItem.onclick = function () {
+                header.style.height = null;
+            }
+        }
     </script>
 </body>
 
