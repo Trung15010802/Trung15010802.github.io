@@ -106,7 +106,6 @@ html {
     height: 46px;
     background-color: black;
     z-index: 1;
-    overflow: hidden;
 }
 
 #nav {
@@ -172,6 +171,18 @@ html {
     font-size: 14px;
 }
 
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
 #header .mobile-menu-btn,
 #header .search-btn {
     float: right;
@@ -186,10 +197,7 @@ html {
     line-height: 46px;
 }
 
-#header .mobile-menu-btn:hover {
-    color: #000;
-    background-color: #ccc;
-}
+
 
 #header .mobile-menu-btn:hover .menu-icon {
     color: #000;

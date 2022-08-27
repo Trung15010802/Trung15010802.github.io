@@ -34,16 +34,17 @@
                     </ul>
                 </li>
             </ul>
-            <!-- Begin: Search button -->
-            <div class="search-btn">
-                <i class="search-icon ti-search"></i>
-            </div>
-            <!-- End: Search button -->
+            <!-- End nav -->
             <!-- Begin: menu button mobile -->
             <div id="mobile-menu" class="mobile-menu-btn">
                 <i class="menu-icon ti-menu"></i>
             </div>
             <!-- End: menu button moblie -->
+            <!-- Begin: Search button -->
+            <div class="search-btn">
+                <i class="search-icon ti-search"></i>
+            </div>
+            <!-- End: Search button -->
         </div>
         <!-- END HEADER -->
         <!-- SLIDER -->
@@ -266,7 +267,7 @@
             setTimeout(slideShow, 2000); // Change image every 2 seconds
         }
 
-        // Xử lý responsive menu buton đóng mở moblie menu
+        // Xử lý responsive menu buton đóng mở mobiie menu
         var header = document.getElementById('header');
         var mobileMenu = document.getElementById('mobile-menu');
         var headerHeight = header.clientHeight;
@@ -279,11 +280,16 @@
         }
 
         // Tự động đóng khi chọn menu
-        var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
         for (var i = 0; i < menuItems.length; i++) {
             var menuItem = menuItems[i];
-            menuItem.onclick = function () {
-                header.style.height = null;
+            menuItem.onclick = function (event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu)
+                    event.preventDefault();
+                else
+                    header.style.height = null;
+
             }
         }
     </script>
